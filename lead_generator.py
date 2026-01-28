@@ -175,7 +175,7 @@ def scrape_google_maps_links(page, niche, location, max_leads):
     """
     search_query = f"{niche} in {location}"
     encoded_query = search_query.replace(" ", "+")
-    url = f"https://www.google.com/maps/search/{encoded_query}"
+    url = f"https://www.google.com/maps/search/{encoded_query}?hl=en"
     logging.info(f"Navigating directly to: {url}")
 
     try:
