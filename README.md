@@ -51,8 +51,12 @@ Fetch only 50 leads (Default is 100):
 ```
 
 ### 4. See the Browser (Debug Mode)
-To watch the bot work (disable headless mode), allow the script to control the browser visibly:
-*Currently defaults to headless. You can edit `lead_generator.py` line 348 to `headless=False` if you want to watch.*
+By default, the browser is **visible** so you can see the scraping in action.
+
+To run in **headless mode** (invisible, faster):
+```bash
+./venv/bin/python lead_generator.py --headless
+```
 
 ## Exporting Data
 
