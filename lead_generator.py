@@ -364,13 +364,7 @@ def main():
     
     with sync_playwright() as p:
         # Launch browser 
-        # Use args.headless or default to True if not specified? 
-        # The script currently hardcodes headless=True. 
-        # Let's make it configurable via flag if user wants, but default to True.
-        # Wait, I didn't add --headless arg in my thought, but it's good practice. 
-        # But I'll stick to what I promised: Niche/Location.
-        
-        browser = p.chromium.launch(headless=True)
+        browser = p.chromium.launch(headless=args.headless)
         context = browser.new_context(
             user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
         )
